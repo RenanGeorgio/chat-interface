@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, Arial;
+  font-size: 14px;
+  background: #ffff85;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-image: '/public/divisoes-1.jpg';
+  width: 100vw;
+}
+
+html, body, #root {
+  height: 100%;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.fundo{
+  background-image:url('../../public/medicine-capsules.svg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  backdrop-filter: blur( 5px );
+  border-top: 1px solid rgba(153, 153, 153, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(153, 153, 153, 0.5);
+
+  
+}
+
+
+.loginfor{
+  background-color: rgba(255, 255, 255, 0.856);
+  border:1px solid black;
+  border-radius: 0.5rem;
+  padding: 2rem;
+
+}
+
+.btn{
+  color: #f7e11f;
+  background-color:#111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}

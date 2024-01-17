@@ -1,0 +1,127 @@
+/* 
+.wrapper {
+  display: flex;
+ flex-direction: column;
+ 
+} */
+
+.content {
+  border-radius: 0.5rem;
+  flex: 1;
+  margin-top: 3rem;
+  width:'100%';
+  justify-content: center;
+  margin: 10%;
+}
+
+.text{
+  background-color: #222;
+  color: white;
+  margin-bottom: 0.1rem;
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue',;
+  border-radius: 0.5rem
+}
+.header{
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  height: 4.5rem;
+  background-color: #222;
+  color: white;
+  margin-top: 0.1rem;
+  ;
+}
+.upload{
+  display: block;
+  width:100%;
+  border-radius: 0.5rem;
+  justify-content: center;
+  border:0.1rem solid black;
+  background-color: rgba(124, 124, 124, 0.486);
+}
+
+
+
+/*estilo index da pagina upload */
+
+.wrapperContent{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* grid-template-rows: 1% 1fr 1fr ; */
+}
+.box{
+  color: #ffffff;
+  padding: 2.9rem ;
+  box-shadow: #363447 0.3rem 0.4rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  /* background-color: #111 */
+}
+
+.box:nth-child(1) { /* menu*/
+  grid-column:2/4;
+  grid-row: 1/2;
+  font-size: .5rem;
+
+  font-style: italic;
+  font-family: 'Gill Sans',sans-serif;  
+  font-weight: bolder;
+  box-shadow: none;
+  align-content: center;
+  /* background-color: black; */
+  margin-top: -1.5rem;
+  height: '10px'!important;
+  padding-bottom: -5%;
+  display: unset;
+}
+
+.parent {
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1px;
+  grid-row-gap: 0px; */
+  /* background-color: aquamarine; */
+/* top: -40px; */
+  padding: 1px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: normal;
+  align-content: normal;
+  overflow: hidden;
+  height:100%;
+  }
+  
+  .div1 {
+     /* grid-area: 1 / 1 / 2 / 2;  */
+     position: relative;
+     margin-top: 0px;
+     width: 100%;
+     
+     /* display: inline-block; */
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  left: 0;
+  }
+  .div2 {
+     /* grid-area: 1 / 1 / 2 / 2; */
+     position: relative;
+     /* float:75%; */
+     /* display: block; */
+     height: 200px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  right: 0;
+  margin-left: 0.5rem;
+   }

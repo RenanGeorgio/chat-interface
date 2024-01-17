@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "es2020",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noImplicitAny": false,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+    "jsx": "preserve",
+    "paths": {
+      "@components/*": ["components/*", "components/*/index", "components/index"],
+      "@libs/*": ["libs/*"],
+      "@styles/*": ["styles/*"],
+      "@contexts/*": ["contexts/*"],
+      "@services": ["services/index"],
+      "@assets/*": ["assets/*"],
+      "@typograph/*": ["typograph/*"],
+      "@controllers": ["controllers/index"],
+      "@helpers/*": ["helpers/*"],
+      "@views/*": ["views/*"],
+      "@utils/*": ["utils/*"]
+    },
+    "incremental": true
+  },
+  "include": [
+    "next-env.d.ts", 
+    "**/*.ts", 
+    "**/*.tsx", 
+    "**/*.js", 
+    "declarations.d.ts",
+    "**/*.mjs",
+    "**/*.html"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "typeRoots": [
+    "node_modules/@types",
+    "typograph/*.ts"
+  ]
+}

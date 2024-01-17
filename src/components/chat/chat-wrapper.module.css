@@ -1,0 +1,54 @@
+.container {
+    position: 'absolute';
+    bottom: 20;
+    right: 20;
+    flex-direction: 'row';
+    align-items: 'center';
+    background-color: '#fff';
+    padding: 8;
+    border-top-left-radius: 16;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 16;
+    border-width: 1;
+    border-color: '#ccc';
+    width: 300;
+    border-radius: 2rem;
+    /* height: 12rem; */
+}
+
+.wrapper{
+    position:relative;
+    float: right;
+    margin-right: 5%;
+    z-index:999;
+    border-radius: 2rem;
+}
+
+/* .container{
+    background-color: #fff;
+    height: fit-content;
+} */
+
+.expandedContainer{
+    height: 60;
+} 
+
+.minimizedContainer{
+    height: 10%;
+}
+
+.minimizeButton{
+    position: 'absolute';
+    bottom: -14;
+    right: 0;
+    background-color: '#fff';
+    border-width: 1;
+    border-color: '#ccc';
+    border-radius: 50;
+    width: 28;
+    height: 28;
+    justify-content: 'center';
+    align-items: 'center';
+    z-index: 1;
+}

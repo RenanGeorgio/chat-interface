@@ -1,0 +1,60 @@
+.wrapper{
+    margin: 0;
+    width: 100%;
+    display: flex;
+}
+
+.logo{
+    background-image: '/public/semfundo-branca.svg';
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .1em .1em;
+    margin-bottom: 2em;
+    background-color: rgba(0, 0, 0, 0.952);
+    height: 4rem;
+    width: 100%;
+   /* display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: 50px;
+   justify-content: center;
+   justify-items: center;
+   list-style-type: none;
+   margin: 0;
+   color: white; */
+
+}
+.navlist{
+    list-style: none;
+    display:flex;
+    color:white;
+    padding-top: 2rem;
+    padding-right: 2rem;
+   
+} 
+ .list{
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    margin-left: 1.3rem;
+    
+    padding: .0rem 0rem 2rem 0rem;
+}
+.notifications {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid gray;
+    z-index: 10;
+    display: flex;
+}
+/* .nav .navlist .list{
+    background-color: black;
+    width: 90%;
+    text-align: center;
+    line-height: 50px;
+} */
