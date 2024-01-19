@@ -7,7 +7,6 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { MdOutlineArrowDownward, MdOutlineArrowUpward } from 'react-icons/md';
-import React from 'react';
 import Typography from '@mui/material/Typography';
 
 const COOKIE_NAME = 'nextjs-example-ai-chat-gpt3'
