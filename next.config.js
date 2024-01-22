@@ -12,7 +12,7 @@ const nextConfig = {
     cfg.entry = async () => {
       const entries = await originalEntry();
 
-      entries['chat.js'] =  '/components/chat/chat-wrapper.tsx';
+      entries['chat'] =  './src/components/chat/chat-wrapper.tsx';
 
       return entries
     }
@@ -25,7 +25,8 @@ const nextConfig = {
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
     AI_TEMP: process.env.AI_TEMP,
     AI_MAX_TOKENS: process.env.AI_MAX_TOKENS,
-    OPENAI_API_ORG: process.env.OPENAI_API_ORG
+    OPENAI_API_ORG: process.env.OPENAI_API_ORG,
+    PUBLIC_URL: process.env.PUBLIC_URL
   },
   async headers() {
     return [

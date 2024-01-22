@@ -1,7 +1,6 @@
-import React from "react";
 import { Grid, Paper } from "@mui/material";
-import ProfilePage from '../../components/user/profile';
-import { Header } from "components/header/header";
+import ProfilePage from '@components/user/profile';
+import { Header } from "@components/header/header";
 
 export default function profile() {
     return (

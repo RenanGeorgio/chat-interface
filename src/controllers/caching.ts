@@ -8,33 +8,17 @@ import setDataTable from '@helpers/data-table';
 import { SupplyfyApi } from "@services";
 
 import { AuthContextType } from '@typograph/interfaces';
-// dados de teste
-import panvelFourthTrain from '../data/panvel_fourth_train.json';
-import { filterAllProductsByDate, filterAllProductsByStore, filterByProduct } from "@helpers/processData";
+
 const CachingController = () => {
   //const authenticated = useSelector((state) => !!state.session.user);
   //const dispatch = useDispatch();
   //const user = useSelector(getClient);
 
   const { isAuthenticated, dataSet }: AuthContextType = useContext(AuthContext);
-  const data = panvelFourthTrain?.results
+  const data = null;
   useEffect(() => {
     if (data) {
-      Promise.all([
-        filterByProduct(data),
-        filterAllProductsByStore(data),
-        filterAllProductsByDate(data)
-      ]).then(([byProduct, byStore, byDate]) => {
-        dataSet({
-          lineChartData: {
-            byProduct: byProduct,
-            byStore: byStore,
-            byDate: byDate
-          }
-        });
-      }).catch(error => {
-        console.log(error);
-      });
+      console.log(data);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated]);

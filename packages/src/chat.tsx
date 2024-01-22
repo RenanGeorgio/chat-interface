@@ -5,9 +5,9 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import { Button } from '@components/chat/Button';
-import { ChatLine, LoadingChatLine } from '@components/chat/ChatLine';
-import type { ChatGPTMessage } from '@components/chat/ChatLine';
+import { Button } from './components/button';
+import { ChatLine, LoadingChatLine } from './components/chat/chat-line';
+import type { ChatGPTMessage } from './components/chat/chat-line';
 
 const COOKIE_NAME = 'nextjs-example-ai-chat-gpt3';
 
@@ -76,8 +76,8 @@ function Chat() {
     const last10messages = newMessages.slice(-10); // memoria para 10 mensagens
     console.log("PARTE 5");
     console.log(last10messages);
-
-    const response = await fetch('/api/chat', {
+    
+    const response = await fetch('https://supplyfy.com.br/api/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

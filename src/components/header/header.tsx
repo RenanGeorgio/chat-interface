@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, Box, Badge, Button } from "@mui/material";
 import { AccountCircle, Notifications } from "@mui/icons-material";
 import Profile from './profile';
-import ButtonNotifications from './notifications';
+//import ButtonNotifications from './notifications';
 import { ArrowRightIcon, DocumentIcon } from '@heroicons/react/24/solid';
 // import Sidebar from '../sidebar/sidebar';
 import Navbar from '../navbar/navbar';
@@ -58,7 +58,7 @@ export const Header = ({ title }: any) => {
           </IconButton>*/}
         </Box>
         <Profile />
-        <ButtonNotifications />
+        {/*<ButtonNotifications />*/}
       </nav>
     </div>
   </Toolbar>

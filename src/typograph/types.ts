@@ -1,5 +1,3 @@
-import { ChartDataset } from "chart.js";
-
 export type Obj = {
     [key: string]: any
 }
@@ -34,18 +32,4 @@ export type GeoLocation = {
     lat: number;
     lng: number;
 }
-
-export type LineGraphData = {
-    labels: string[];
-    datasets: ChartDataset
-    options: Obj;
-}
-
-export type ChartData = {
-        lineChartData:{
-            byProduct: LineGraphData,
-            byStore: LineGraphData,
-            byDate: LineGraphData
-        }
-    }
     

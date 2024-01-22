@@ -1,0 +1,35 @@
+{
+    "name": "Warehouse App",
+    "lang": "pt-BR",
+    "short_name": "Warehouse",
+    "description": "Aplicação destinada a otimização e visualização de operações de picking e put-away em armazéns",
+    "theme_color": "#02028c",
+    "background_color": "#080814",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/",
+    "orientation": "landscape-primary",
+    "dir": "auto",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
