@@ -1,5 +1,10 @@
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
+import { dts } from 'rollup-plugin-dts';
+
+import pkg from './package.json' assert {type: 'json'};
 
 const devMode = (process.env.NODE_ENV === 'development');
 console.log(`${ devMode ? 'development' : 'production' } mode bundle`);
@@ -11,27 +16,44 @@ function isDev() {
 export default [
   {
     input: 'src/index.ts',
-    output: {
-      file: 'dist/index.js',
-      format: 'cjs',
-      sourcemap: devMode ? 'inline' : false,
-      plugins: [
-        typescript({
-          tsconfig: './tsconfig.json'
-        }),
-        !isDev() ? terser({
-          ecma: 2020,
-          mangle: { toplevel: true },
-          compress: {
-            module: true,
-            toplevel: true,
-            unsafe_arrows: true,
-            drop_console: !devMode,
-            drop_debugger: !devMode
-          },
-          output: { quote_style: 1 }
-        }) : null
-      ]
-    }
+    output: [
+      {
+        file: pkg.main,
+        format: 'cjs',
+        sourcemap: devMode
+      },
+      {
+        file: pkg.module,
+        format: 'esm',
+        sourcemap: devMode
+      }
+    ],
+    onwarn(warning, warn) {
+      if ((devMode) && (warning.code === 'MODULE_LEVEL_DIRECTIVE')) {
+        return
+      }
+      warn(warning)
+    },
+    external: [
+      '@mui/material',
+      'clsx',
+      'react-icons',
+      'prop-types',
+      'react-wrap-balancer',
+      'react-cookie'
+    ],
+    plugins: [
+      commonjs(),
+      resolve(),
+      typescript({
+        tsconfig: './tsconfig.json'
+      }),
+      !isDev() ? terser() : null
+    ]
+  },
+  {
+    input: 'dist/esm/index.d.ts',
+    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
+    plugins: [dts()]
   }
 ];

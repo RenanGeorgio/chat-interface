@@ -5,9 +5,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import { Button } from './components/button';
-import { ChatLine, LoadingChatLine } from './components/chat/chat-line';
-import type { ChatGPTMessage } from './components/chat/chat-line';
+import { Button, ContentLine, LoadingChat, ChatGPTMessage } from '../../components';
 
 const COOKIE_NAME = 'nextjs-example-ai-chat-gpt3';
 
@@ -168,12 +166,12 @@ function Chat() {
                 {messages?.length > 0 ? 
                   <>
                     {messages?.map(({ content, role }: any, index: any) => (
-                      <ChatLine key={index} role={role} content={content} />
+                      <ContentLine key={index} role={role} content={content} />
                     ))}
                   </>
                   : <></>
                 }
-                {loading && <LoadingChatLine />}
+                {loading && <LoadingChat />}
               </div>
               <div style={{ marginTop:'5px', paddingBottom:'25px' }}>
                 <InputMessage
