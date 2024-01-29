@@ -1,6 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
+import { babel } from '@rollup/plugin-babel';
 import terser from '@rollup/plugin-terser';
 import { dts } from 'rollup-plugin-dts';
 
@@ -45,6 +46,11 @@ export default [
     plugins: [
       commonjs(),
       resolve(),
+      babel({
+        exclude: 'node_modules/**',
+        extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', '.tsx'],
+        babelHelpers: 'bundled'
+       }),
       typescript({
         tsconfig: './tsconfig.json'
       }),
@@ -52,7 +58,7 @@ export default [
     ]
   },
   {
-    input: 'dist/esm/index.d.ts',
+    input: 'dist/esm/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()]
   }
