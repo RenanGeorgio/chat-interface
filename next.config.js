@@ -6,19 +6,6 @@
  */
 const nextConfig = {
   reactStrictMode: true,
-  webpack: function (cfg) {
-    const originalEntry = cfg.entry;
-
-    cfg.entry = async () => {
-      const entries = await originalEntry();
-
-      entries['chat'] =  './src/components/chat/chat-wrapper.tsx';
-
-      return entries
-    }
-
-    return cfg
-  },
   env: {
     NEXT_PUBLIC_MAPTILER_API_KEY: process.env.NEXT_PUBLIC_MAPTILER_API_KEY,
     NEXT_PUBLIC_OPEN_CELL_PKEY: process.env.NEXT_PUBLIC_OPEN_CELL_PKEY,

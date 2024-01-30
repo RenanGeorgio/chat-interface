@@ -21,16 +21,16 @@ export default [
       {
         file: pkg.main,
         format: 'cjs',
-        sourcemap: devMode
+        sourcemap: true
       },
       {
         file: pkg.module,
         format: 'esm',
-        sourcemap: devMode
+        sourcemap: true
       }
     ],
     onwarn(warning, warn) {
-      if ((devMode) && (warning.code === 'MODULE_LEVEL_DIRECTIVE')) {
+      if ((!devMode) && (warning.code === 'MODULE_LEVEL_DIRECTIVE')) {
         return
       }
       warn(warning)
@@ -39,7 +39,6 @@ export default [
       '@mui/material',
       'clsx',
       'react-icons',
-      'prop-types',
       'react-wrap-balancer',
       'react-cookie'
     ],
@@ -54,7 +53,7 @@ export default [
       typescript({
         tsconfig: './tsconfig.json'
       }),
-      !isDev() ? terser() : null
+      isDev() ? terser() : null
     ]
   },
   {

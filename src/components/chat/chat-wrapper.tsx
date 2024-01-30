@@ -3,11 +3,12 @@ import Box from '@mui/material/Box';
 import { Button, Typography } from '@mui/material';
 import Popper from '@mui/material/Popper';
 import { ChatBubbleBottomCenterIcon } from '@heroicons/react/24/solid';
-import Chat from '@views/chat';
+import { ChatInterface } from 'ignai-chat-interface';
+
 import styles from './chat-wrapper.module.css';
 
-export default function ChatWrapper() {
-  const [open, setOpen] = useState(false);
+const ChatWrapper: React.FC = (): any => {
+  const [open, setOpen] = useState<boolean>(false);
   const elRef = useRef(null);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -20,9 +21,7 @@ export default function ChatWrapper() {
 
   return (
     <>
-      <Box 
-      sx={{ top:'55px', position:'relative' }}
-      >
+      <Box sx={{ top:'55px', position:'relative' }}>
         <Button
           style={{ background: '#fff', height: '3rem' }}
           type="button" 
@@ -32,14 +31,16 @@ export default function ChatWrapper() {
           <Typography></Typography>
           <ChatBubbleBottomCenterIcon width={30} />
         </Button>
-      <Popper open={open} placement="top-end" anchorEl={elRef.current}>
-        <div className={styles.wrapper}>
-          <div className={styles.container}>
-            <Chat />
+        <Popper open={open} placement="top-end" anchorEl={elRef.current}>
+          <div className={styles.wrapper}>
+            <div className={styles.container}>
+              <ChatInterface />
+            </div>
           </div>
-        </div>
-      </Popper>
+        </Popper>
       </Box>
     </>
-  )
+  );
 }
+
+export default ChatWrapper

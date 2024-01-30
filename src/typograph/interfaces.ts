@@ -1,4 +1,4 @@
-import { User, SignInData, ResponseError, Obj } from './types';
+import { User, SignInData, ResponseError, Obj, ChatGPTAgent } from './types';
 
 export interface AuthContextType {
     isAuthenticated: boolean;
@@ -6,4 +6,9 @@ export interface AuthContextType {
     signIn: (data: SignInData) => Promise<void | ResponseError>
     dataSet: (data: Obj) => void;
     dataGet: any;
+}
+
+export interface ChatGPTMessage {
+  role: ChatGPTAgent;
+  content: string;
 }

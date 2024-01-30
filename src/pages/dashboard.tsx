@@ -1,16 +1,16 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Header } from '@components/header/header';
 import Image from 'next/image';
-
-import styles from '@styles/Chart.module.css';
-import Footer from '@components/footer/footer';
 import { ProSidebarProvider } from 'react-pro-sidebar';
+
+import { Header } from '@components/header/header';
+import Footer from '@components/footer/footer';
 import SidebarLayout from '@components/sidebar/sidebar';
 
-const Logo = "../../public/LogoPanvel.svg"
+import styles from '@styles/Chart.module.css';
 
-const IndexPage: React.FC = () => {
+const Logo = '../../public/LogoPanvel.svg';
 
+const IndexPage: any = () => {
   return ( 
     <div className={styles.content}>
       <div style={{flexGrow:1, width:'100vw', zIndex:9999995, position:'fixed'}}>
@@ -42,6 +42,6 @@ const IndexPage: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
-export default IndexPage;
+export default IndexPage

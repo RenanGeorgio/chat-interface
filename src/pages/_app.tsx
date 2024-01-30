@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/react';
 import { FC, useEffect } from 'react';
 
 import 'tailwindcss/tailwind.css';
@@ -17,7 +17,7 @@ const Main: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
       <Analytics />
       <AnyComponent {...pageProps} />
     </>
-  )
+  );
 }
 
 export default Main

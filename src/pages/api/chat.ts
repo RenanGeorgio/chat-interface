@@ -1,4 +1,4 @@
-import type { ChatGPTMessage } from '../../components/chat/ChatLine'
+import { ChatGPTMessage } from '../../typograph/interfaces';
 import { OpenAIStream, OpenAIStreamPayload } from '../../utils/OpenAIStream'
 
 if (!process.env.OPENAI_API_KEY) {

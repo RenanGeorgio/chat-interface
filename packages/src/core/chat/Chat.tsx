@@ -5,53 +5,17 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import { Button, ContentLine, LoadingChat, ChatGPTMessage } from '../../components';
+import { initialMessages, InputMessage } from '../message';
+import { ContentLine, LoadingChat, ChatGPTMessage } from '../../components';
 
 const COOKIE_NAME = 'nextjs-example-ai-chat-gpt3';
 
-// mensagem de inicialização
-export const initialMessages: ChatGPTMessage[] = [
-  {
-    role: 'assistant',
-    content: 'Otimização de Supply Chain',
-  },
-]
-
-const InputMessage = ({ input, setInput, sendMessage }: any) => (
-  <div className=" flex clear-both">
-    <input
-      type="text"
-      aria-label="chat input"
-      required
-      className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 sm:text-sm"
-      value={input}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter') {
-          sendMessage(input)
-          setInput('')
-        }
-      }}
-      onChange={(e) => {
-        setInput(e.target.value)
-      }}
-    />
-    <Button
-      type="submit"
-      className="ml-4 flex-none"
-      onClick={() => {
-        sendMessage(input)
-        setInput('')
-      }}
-    >
-      Converse
-    </Button>
-  </div>
-)
-
-function Chat() {
-  const [messages, setMessages] = useState<ChatGPTMessage[] | any>(initialMessages);
-  const [input, setInput] = useState('');
-  const [loading, setLoading] = useState(false);
+function Chat<React.FC>() {
+  console.log(initialMessages);
+  const [messages, setMessages] = useState<ChatGPTMessage[]>(initialMessages);
+  console.log(messages);
+  const [input, setInput] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
   const [cookie, setCookie] = useCookies([COOKIE_NAME]);
 
   useEffect(() => {

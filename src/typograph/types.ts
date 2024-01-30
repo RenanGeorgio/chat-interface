@@ -33,3 +33,4 @@ export type GeoLocation = {
     lng: number;
 }
     
+export type ChatGPTAgent = 'user' | 'system' | 'assistant'
