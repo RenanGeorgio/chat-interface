@@ -7,7 +7,7 @@ import { ChatInterface } from 'ignai-chat-interface';
 
 import styles from './chat-wrapper.module.css';
 
-const ChatWrapper: React.FC = (): any => {
+const ChatWrapper: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
   const elRef = useRef(null);
 

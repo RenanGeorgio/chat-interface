@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import Image from 'next/image';
 import { ProSidebarProvider } from 'react-pro-sidebar';
 
@@ -8,9 +7,9 @@ import SidebarLayout from '@components/sidebar/sidebar';
 
 import styles from '@styles/Chart.module.css';
 
-const Logo = '../../public/LogoPanvel.svg';
+const Logo = './LogoPanvel.svg';
 
-const IndexPage: any = () => {
+const IndexPage: React.FC = () => {
   return ( 
     <div className={styles.content}>
       <div style={{flexGrow:1, width:'100vw', zIndex:9999995, position:'fixed'}}>
@@ -27,12 +26,6 @@ const IndexPage: any = () => {
           <div  id={styles.wrapper}>
             <div className={styles.box}>
               <div className='flex justify-end'>
-                <Image
-                  src="/LogoPanvel.svg"
-                  width={200}
-                  height={100}
-                  style={{margin:25,justifyContent:'flex-end'}}
-                />
               </div>
             </div>
           </div>
