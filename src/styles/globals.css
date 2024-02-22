@@ -52,3 +52,50 @@ a {
   outline: 0;
   box-sizing: border-box;
 }
+
+/* ChatBot  */
+
+svg {
+  display: flex;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.cds--accordion__item{
+  background-color: rgb(238, 238, 238);
+  padding: 5px;
+}
+.cds--accordion__content{
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+
+.base-Popper-root{
+  /* background-color: aqua; */
+  width: 380px;
+  padding:5px
+}
+
+.float-right {
+  /* padding: 1px; */
+  height: 40px;
+  width: 96% !important;
+  /* background-color: aqua; */
+  margin-bottom: 5px;
+  /* text-wrap: wrap; */
+  white-space: normal;
+}
+.clear-both{
+  /* padding: 1px; */
+  height: 40px;
+  width: 75% !important;
+  margin-bottom: 5px;
+  /* text-wrap: wrap; */
+  white-space: normal;
+}
+
+.cds--accordion__item svg{
+  display: none;
+}
