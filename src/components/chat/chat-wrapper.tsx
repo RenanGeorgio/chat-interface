@@ -23,7 +23,7 @@ const ChatWrapper: React.FC = () => {
     <>
       <Box sx={{ top:'55px', position:'relative' }}>
         <Button
-          style={{ background: '#fff', height: '3rem' }}
+          style={{ background: '#fff', height: '3rem', position:'relative', top:-55,border:'1px solid black' }}
           type="button" 
           ref={elRef} 
           onClick={handleClick}
