@@ -84,7 +84,7 @@ a {
   min-height: 40px;
   max-height: 200px;
   width: 230px !important;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-wrap: wrap;
   white-space:normal;
   word-wrap: break-word;
@@ -127,9 +127,13 @@ padding: 5px;
   height:  auto;
   word-wrap: break-word;
   overflow: hidden;
-  padding-left: -1px;
+  padding: 0px 3px;
   font-size: 1vw;
   text-align: left;
   line-height: 1;
   padding: 5px 0;
+}
+
+p span{
+  padding-right: 5px;
 }
