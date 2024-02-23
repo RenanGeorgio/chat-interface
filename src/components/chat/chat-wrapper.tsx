@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
-import { Button, Typography } from '@mui/material';
+import { Button, IconButton, Typography } from '@mui/material';
 import Popper from '@mui/material/Popper';
 import { ChatBubbleBottomCenterIcon } from '@heroicons/react/24/solid';
 import { ChatInterface } from 'ignai-chat-interface';
@@ -20,17 +20,17 @@ const ChatWrapper: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <Box sx={{ top:'55px', position:'relative' }}>
-        <Button
-          style={{ background: '#fff', height: '3rem', position:'relative', top:-55,border:'1px solid black' }}
+        <IconButton
+          style={{   position:'relative', top:-65,}}
           type="button" 
           ref={elRef} 
           onClick={handleClick}
           >
           <Typography></Typography>
-          <ChatBubbleBottomCenterIcon width={30} />
-        </Button>
+          <ChatBubbleBottomCenterIcon  className='text-blue-500 size-11 rounded-xl mt-1'  />
+        </IconButton>
         <Popper open={open} placement="top-end" anchorEl={elRef.current}>
           <div className={styles.wrapper}>
             <div className={styles.container}>
@@ -39,7 +39,7 @@ const ChatWrapper: React.FC = () => {
           </div>
         </Popper>
       </Box>
-    </>
+    </div>
   );
 }
 

@@ -55,12 +55,12 @@ a {
 
 /* ChatBot  */
 
-svg {
+/* svg {
   display: flex;
   vertical-align: middle;
   width: 20px;
   height: 20px;
-}
+} */
 
 .cds--accordion__item{
   background-color: rgb(238, 238, 238);
@@ -69,33 +69,67 @@ svg {
 .cds--accordion__content{
   display: flex;
   flex-direction: column;
-  width: 380px;
+  width: 280px;
+  
 }
 
 .base-Popper-root{
   /* background-color: aqua; */
-  width: 380px;
+  width: 300px;
   padding:5px
+  
 }
 
-.float-right {
-  /* padding: 1px; */
-  height: 40px;
-  width: 96% !important;
-  /* background-color: aqua; */
-  margin-bottom: 5px;
-  /* text-wrap: wrap; */
-  white-space: normal;
+.float-right{
+  min-height: 40px;
+  max-height: 200px;
+  width: 230px !important;
+  margin-bottom: 15px;
+  text-wrap: wrap;
+  white-space:normal;
+  word-wrap: break-word;
+    overflow: hidden;
+    padding-left: -1px;
+    font-size: 1vw;
+    text-align: left;
+    /* padding-inline: 5px; */
 }
-.clear-both{
-  /* padding: 1px; */
-  height: 40px;
-  width: 75% !important;
-  margin-bottom: 5px;
-  /* text-wrap: wrap; */
-  white-space: normal;
+ .clear-both{
+/* background-color: blueviolet; */
+display: flex;
+justify-content: space-between;
+gap: 5px;
+padding: 5px;
+
+}
+
+.clear-both button{
+  border: 1px solid black;
+}
+
+.clear-both input{
+  width: 80%;
 }
 
 .cds--accordion__item svg{
   display: none;
+}
+
+.css-1h2muu0{
+  top:55px
+}
+
+.text{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 200px;
+  height:  auto;
+  word-wrap: break-word;
+  overflow: hidden;
+  padding-left: -1px;
+  font-size: 1vw;
+  text-align: left;
+  line-height: 1;
+  padding: 5px 0;
 }

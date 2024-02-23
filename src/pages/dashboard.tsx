@@ -30,7 +30,7 @@ const IndexPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div style={{display:'flex', width:'100%', zIndex:9999995, position: 'fixed', bottom:5, border:'1px solid red'}}>
+        <div style={{display:'flex', width:'100%', position: 'fixed', bottom:5,}}>
         <Footer />
       </div>
     </div>
