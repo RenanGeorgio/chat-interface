@@ -84,7 +84,7 @@ a {
   word-wrap: break-word;
     overflow: hidden;
     padding-left: -1px;
-    font-size: 1vw;
+    /* font-size: 16px; */
     text-align: left;
     /* padding-inline: 5px; */
 }
@@ -130,4 +130,5 @@ padding: 5px;
 
 p span{
   padding-right: 5px;
+  font-size: 16px;
 }
