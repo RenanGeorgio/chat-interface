@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import { Button, IconButton, Typography } from '@mui/material';
 import Popper from '@mui/material/Popper';
 import { ChatBubbleBottomCenterIcon } from '@heroicons/react/24/solid';
-import { ChatInterface } from 'ignai-chat-interface';
+import  {ChatInterface}  from 'ignai-chat-interface';
 
 import styles from './chat-wrapper.module.css';
 
