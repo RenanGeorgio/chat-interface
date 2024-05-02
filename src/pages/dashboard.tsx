@@ -30,8 +30,8 @@ const IndexPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div style={{flexGrow:1, width:'100vw', zIndex:9999995, position: 'fixed', bottom:0}}>
-        <Footer/>
+        <div style={{display:'flex', width:'100%', position: 'fixed', bottom:5,}}>
+        <Footer />
       </div>
     </div>
   );

@@ -20,7 +20,7 @@
 .wrapper{
     position:relative;
     float: right;
-    margin-right: 5%;
+    margin-right: 3%;
     z-index:999;
     border-radius: 2rem;
 }
